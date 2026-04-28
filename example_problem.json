@@ -1,0 +1,29 @@
+{
+  "name": "analytic_example",
+  "function": "analytic_system",
+  "inputs": [
+    {
+      "name": "x1",
+      "bounds": [0.0, 3.14],
+      "description": "Active optimization variable"
+    },
+    {
+      "name": "x2",
+      "value": 1.5,
+      "description": "Fixed system input"
+    }
+  ],
+  "outputs": ["y1", "y2"],
+  "objectives": [
+    {
+      "name": "minimize_y1",
+      "formula": "y1"
+    }
+  ],
+  "ineq_constraints": [
+    {
+      "name": "limit_y2",
+      "formula": "y2 - 0.5"
+    }
+  ]
+}
